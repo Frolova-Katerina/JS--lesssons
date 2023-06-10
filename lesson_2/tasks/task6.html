@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1> Задача 6</h1>
+	<p>
+		З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. 
+		Обчислити вартість кожного товару окремо та загальну вартість. Вивести
+		чек (як у супермаркеті) використовуючи елементи розмітки.
+	</p>
+	<script>
+		// 1. Вводимо необхідні дані
+	   let costProduct1 = parseFloat(prompt(`Введіть вартість товару №1`,`0`));
+		let quantityProduct1 = parseFloat(prompt(`Введіть кількість товару №1`,`0`));
+		let costProduct2 = parseFloat(prompt(`Введіть вартість товару №2`,`0`));
+		let quantityProduct2 = parseFloat(prompt(`Введіть кількість товару №2`,`0`));
+		let costProduct3 = parseFloat(prompt(`Введіть вартість товару №3`,`0`));
+		let quantityProduct3 = parseInt(prompt(`Введіть кількість товару №3`,`0`));
+
+		// 2. Знаходимо результат
+      //  Обчислюємо віртість кожного товару окремо:
+
+		let  totalCostProduct1 = costProduct1 * quantityProduct1;
+		let  totalCostProduct2 = costProduct2 * quantityProduct2;
+		let  totalCostProduct3 = costProduct3 * quantityProduct3;
+
+		// Загальна вартість товару:
+
+		let sumTotalCostProduct = totalCostProduct1 + totalCostProduct2 +totalCostProduct3;
+
+
+		// 3. Виводимо результат
+		
+		document.write (`
+		<table border= 2px>
+			<tr>
+			<th>Вартість товару</th>
+			<th>Кількість од.</th>	
+			<th>Вартість од.</th>	
+			<th>Загальна вартість</th>	
+			</tr>
+			<tr>
+				<th>Товар №1</th>
+				<td>${costProduct1}</td>
+				<td>${quantityProduct1}</td>
+				<td>${totalCostProduct1}</td>
+			</tr>
+			<tr>
+				<th>Товар №2</th>
+				<td>${costProduct2}</td>
+				<td>${quantityProduct2}</td>
+				<td>${totalCostProduct2}</td>
+			</tr>
+			<tr>
+				<th>Товар №3</th>
+				<td>${costProduct3}</td>
+				<td>${quantityProduct3}</td>
+				<td>${totalCostProduct3}</td>
+			</tr>
+
+			<tr>
+				<th>Сума</th>
+				<td colspan="4">${sumTotalCostProduct}</td>
+			</tr>
+			</table>
+		`);
+	</script>
+</body>
+</html>
